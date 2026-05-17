@@ -1,39 +1,138 @@
-<view class="page planner-page">
-  <view class="map-shell">
-    <view class="map-empty">地图占位区（空态）</view>
+<view class="page planner-page planner-map-page">
+  <view class="map-stage">
+    <view class="map-sdk-placeholder">
+      <view class="map-sky"></view>
+      <view class="map-hill hill-far"></view>
+      <view class="map-hill hill-mid"></view>
+      <view class="map-hill hill-near"></view>
+      <view class="map-river"></view>
+      <view class="map-route route-main"></view>
+      <view class="map-route route-branch"></view>
+      <view class="map-pin pin-a"><view class="pin-dot"></view><view class="pin-label">钟楼</view></view>
+      <view class="map-pin pin-b"><view class="pin-dot"></view><view class="pin-label">城墙</view></view>
+      <view class="map-pin pin-c"><view class="pin-dot"></view><view class="pin-label">秦岭</view></view>
+      <view class="sdk-placeholder-card">
+        <view class="sdk-placeholder-title">地图 SDK 占位图</view>
+        <view class="sdk-placeholder-desc">后续接入定位、路线、热力和景点图层</view>
+      </view>
+    </view>
+
+    <view class="map-info-card {{drawerState === 'peek' ? 'show' : ''}}">
+      <view class="map-info-title">西安漫游地图</view>
+      <view class="map-info-desc">下拉后保留地图视野，方便查看路线和附近体验。</view>
+    </view>
   </view>
 
-  <view class="agent-panel {{panelState}}" bindtouchstart="onPanelTouchStart" bindtouchend="onPanelTouchEnd">
-    <view class="panel-grabber"></view>
-
-    <view class="panel-header" wx:if="{{panelState === 'expanded'}}">
-      <view class="new-chat-entry" bindtap="startNewChat">&lt; 新对话</view>
+  <view
+    class="assistant-sheet {{drawerState}}"
+    bindtouchstart="onDrawerTouchStart"
+    bindtouchend="onDrawerTouchEnd"
+  >
+    <view class="sheet-drag-area" bindtap="toggleDrawer">
+      <view class="drawer-grabber"></view>
+      <view class="sheet-drag-copy">{{drawerState === 'peek' ? '上滑打开智能对话' : '下拉查看地图信息'}}</view>
     </view>
 
-    <view class="panel-cta" wx:if="{{panelState !== 'expanded'}}" bindtap="openAgentPanel">打开智能体对话</view>
-
-    <scroll-view class="message-list" scroll-y="true">
-      <view class="message-item {{item.role === 'assistant' ? 'assistant-message' : 'user-message'}}" wx:for="{{messages}}" wx:key="index">
-        <view class="message-role">{{item.role}}</view>
-        <view class="message-content">{{item.text}}</view>
+    <view wx:if="{{drawerState === 'peek'}}" class="sheet-preview">
+      <view class="preview-head">
+        <view>
+          <view class="preview-kicker">智能规划</view>
+          <view class="preview-title">从地图开始安排西安行程</view>
+        </view>
+        <view class="preview-ai">AI</view>
       </view>
-    </scroll-view>
+      <view class="preview-desc">拖动上方短横线上滑，打开智能对话；下拉可继续查看地图占位信息。</view>
 
-    <view class="tool-tabs">
-      <view
-        class="tool-tab {{activeTool === item ? 'active' : ''}}"
-        wx:for="{{tools}}"
-        wx:key="*this"
-        bindtap="onSelectTool"
-        data-tool="{{item}}"
-      >
-        {{item}}
+      <view class="summary-grid">
+        <view class="summary-card" wx:for="{{mapSummaries}}" wx:key="label">
+          <view class="summary-value">{{item.value}}</view>
+          <view class="summary-label">{{item.label}}</view>
+        </view>
+      </view>
+
+      <view class="preview-actions">
+        <view
+          class="preview-action {{activeTool === item.tool ? 'active' : ''}}"
+          wx:for="{{heroActions}}"
+          wx:key="title"
+          bindtap="onSelectTool"
+          data-tool="{{item.tool}}"
+        >
+          <view class="preview-action-title">{{item.title}}</view>
+          <view class="preview-action-desc">{{item.desc}}</view>
+        </view>
+      </view>
+
+      <view class="preview-composer" bindtap="openChat">
+        <view class="preview-input">问问路线、商品、客流或假期安排</view>
+        <view class="preview-send">上滑</view>
       </view>
     </view>
 
-    <view class="chat-composer">
-      <input class="composer-input" placeholder="输入你的问题" value="{{draft}}" bindinput="onInput" />
-      <view class="composer-send" bindtap="onSend">发送</view>
+    <view wx:else class="chat-panel">
+      <view class="chat-head">
+        <view>
+          <view class="chat-kicker">西安漫游智能体</view>
+          <view class="chat-title">今天想怎么安排？</view>
+        </view>
+        <view class="map-toggle" bindtap="showMapInfo">看地图</view>
+      </view>
+
+      <scroll-view class="message-list" scroll-y="true" enable-flex="true">
+        <view class="tool-grid">
+          <view
+            class="tool-card {{activeTool === item.tool ? 'active' : ''}}"
+            wx:for="{{heroActions}}"
+            wx:key="title"
+            bindtap="onSelectTool"
+            data-tool="{{item.tool}}"
+          >
+            <view class="tool-card-title">{{item.title}}</view>
+            <view class="tool-card-desc">{{item.desc}}</view>
+          </view>
+        </view>
+
+        <view class="prompt-section">
+          <view class="prompt-head">
+            <view class="prompt-title">可以试试这些问题</view>
+            <view class="refresh-prompts" bindtap="refreshPrompts">换一换</view>
+          </view>
+          <view class="prompt-list">
+            <view
+              class="prompt-chip"
+              wx:for="{{promptSuggestions}}"
+              wx:key="*this"
+              bindtap="onSelectPrompt"
+              data-prompt="{{item}}"
+            >{{item}}</view>
+          </view>
+        </view>
+
+        <view class="message-stack">
+          <view class="message-item {{item.role === 'assistant' ? 'assistant-message' : 'user-message'}}" wx:for="{{messages}}" wx:key="index">
+            <view class="message-content">{{item.text}}</view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <view class="bottom-tools">
+        <scroll-view class="tool-scroll" scroll-x="true" show-scrollbar="false">
+          <view class="tool-track">
+            <view
+              class="tool-pill {{activeTool === item.title ? 'active' : ''}}"
+              wx:for="{{tools}}"
+              wx:key="title"
+              bindtap="onSelectTool"
+              data-tool="{{item.title}}"
+            >{{item.shortTitle}}</view>
+          </view>
+        </scroll-view>
+      </view>
+
+      <view class="chat-composer">
+        <input class="chat-input" placeholder-class="chat-placeholder" placeholder="请输入您想询问的内容" value="{{draft}}" bindinput="onInput" />
+        <view class="send-button" bindtap="onSend">发送</view>
+      </view>
     </view>
   </view>
 </view>

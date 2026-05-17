@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "智能规划"
+  "navigationBarTitleText": "智能规划",
+  "navigationStyle": "custom",
+  "disableScroll": true
 }
