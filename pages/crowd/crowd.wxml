@@ -1,0 +1,12 @@
+<view class="page secondary-page">
+  <view class="page-title">历史客流</view>
+  <view class="page-subtitle">静态趋势图展示热门时段和错峰建议。</view>
+  <view class="chart-card card">
+    <view class="bar-row">
+      <view class="bar" wx:for="{{bars}}" wx:key="*this" style="height: {{item * 2}}rpx;"></view>
+    </view>
+  </view>
+  <view class="tip-list">
+    <view class="tip-card soft-card" wx:for="{{tips}}" wx:key="*this">{{item}}</view>
+  </view>
+</view>

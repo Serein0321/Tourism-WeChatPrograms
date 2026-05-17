@@ -1,0 +1,89 @@
+.compose-card {
+  margin-top: 28rpx;
+  padding: 34rpx;
+  border-radius: 34rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compose-title {
+  font-size: 34rpx;
+  font-weight: 800;
+  color: #173e36;
+}
+
+.compose-desc {
+  width: 360rpx;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #4b6a62;
+  line-height: 1.5;
+}
+
+.compose-button {
+  padding: 16rpx 24rpx;
+  border-radius: 999rpx;
+  background: #ffffff;
+  color: #27b37e;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.tag-row {
+  display: flex;
+  gap: 14rpx;
+  overflow-x: auto;
+}
+
+.post-list {
+  margin-top: 18rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.post-card {
+  padding: 18rpx;
+  display: flex;
+  gap: 20rpx;
+}
+
+.post-image {
+  width: 190rpx;
+  min-width: 190rpx;
+  height: 160rpx;
+  border-radius: 22rpx;
+}
+
+.post-title {
+  margin-top: 12rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.post-desc {
+  margin-top: 8rpx;
+  color: #748780;
+  font-size: 24rpx;
+  line-height: 1.45;
+}
+
+.post-score {
+  margin-top: 10rpx;
+  color: #f49b2f;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.community-actions {
+  margin-top: 28rpx;
+}
+
+.action-card {
+  padding: 24rpx 10rpx;
+  text-align: center;
+  color: #245047;
+  font-size: 26rpx;
+  font-weight: 700;
+}

@@ -1,0 +1,13 @@
+<view class="page secondary-page">
+  <view class="page-title">商品对比</view>
+  <view class="page-subtitle">价格、评分、距离和推荐理由一屏对比。</view>
+  <view class="compare-table card">
+    <view class="compare-row compare-head">
+      <view>项目</view><view>价格</view><view>评分</view><view>距离</view>
+    </view>
+    <view class="compare-row" wx:for="{{rows}}" wx:key="name">
+      <view>{{item.name}}</view><view>{{item.price}}</view><view>{{item.score}}</view><view>{{item.distance}}</view>
+      <view class="compare-reason">{{item.reason}}</view>
+    </view>
+  </view>
+</view>

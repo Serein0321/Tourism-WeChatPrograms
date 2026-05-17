@@ -1,0 +1,28 @@
+.rating-card {
+  margin-top: 28rpx;
+  padding: 28rpx;
+}
+
+.stars {
+  color: #ffad42;
+  font-size: 56rpx;
+  letter-spacing: 8rpx;
+}
+
+.tag-row {
+  margin-top: 22rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14rpx;
+}
+
+.textarea-box {
+  height: 180rpx;
+  margin: 24rpx 0;
+  padding: 24rpx;
+  border-radius: 22rpx;
+  background: #f1f8f5;
+  color: #6f8580;
+  font-size: 26rpx;
+  line-height: 1.6;
+}

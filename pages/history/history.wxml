@@ -1,0 +1,13 @@
+<view class="page secondary-page">
+  <view class="page-title">最近浏览</view>
+  <view class="page-subtitle">继续查看最近关注的景点、路线和商品。</view>
+  <view class="list">
+    <view class="row-card card" wx:for="{{records}}" wx:key="*this">
+      <view>
+        <view class="row-title">{{item}}</view>
+        <view class="row-desc">刚刚浏览 · 西安推荐</view>
+      </view>
+      <view class="row-arrow">›</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="page profile-page">
+  <view class="user-card gradient-xian">
+    <view class="avatar">旅</view>
+    <view>
+      <view class="user-name">西安旅客</view>
+      <view class="user-desc">收藏灵感，规划下一段古都漫游。</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">我的服务</view>
+    <view class="menu-list">
+      <view class="menu-card card" wx:for="{{primaryItems}}" wx:key="title" bindtap="goPage" data-url="{{item.url}}">
+        <view>
+          <view class="menu-title">{{item.title}}</view>
+          <view class="menu-desc">{{item.desc}}</view>
+        </view>
+        <view class="menu-arrow">›</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">常用服务</view>
+    <view class="grid-2 service-grid">
+      <view class="service-card soft-card" wx:for="{{services}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+.trip-list {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.trip-card {
+  padding: 28rpx;
+}
+
+.trip-title {
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.trip-date {
+  margin-top: 10rpx;
+  color: #27b37e;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.trip-stops {
+  margin-top: 10rpx;
+  color: #748780;
+  font-size: 24rpx;
+}
+
+.trip-actions {
+  margin-top: 28rpx;
+}
+
+.action-card {
+  padding: 24rpx 8rpx;
+  text-align: center;
+  color: #245047;
+  font-size: 26rpx;
+  font-weight: 700;
+}

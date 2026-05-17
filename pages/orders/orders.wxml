@@ -1,0 +1,13 @@
+<view class="page secondary-page">
+  <view class="page-title">订单</view>
+  <view class="page-subtitle">待出行、已完成和退款售后订单。</view>
+  <view class="list">
+    <view class="row-card card" wx:for="{{orders}}" wx:key="title">
+      <view>
+        <view class="row-title">{{item.title}}</view>
+        <view class="row-desc">{{item.date}}</view>
+      </view>
+      <view class="pill">{{item.status}}</view>
+    </view>
+  </view>
+</view>

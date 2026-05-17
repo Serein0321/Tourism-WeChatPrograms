@@ -1,0 +1,38 @@
+<view class="roam-page">
+  <view class="hero-visual">
+    <view class="hero-image-placeholder">
+      <view class="hero-ridge hero-ridge-far"></view>
+      <view class="hero-ridge hero-ridge-near"></view>
+      <view class="hero-water"></view>
+    </view>
+    <view class="hero-shade"></view>
+
+    <view class="hero-topline">Hey，来西安漫游</view>
+    <view class="hero-title">在古都里发现新的风景</view>
+    <view class="hero-subtitle">城市、山水与烟火气，一起装进行程。</view>
+
+    <view class="hero-actions">
+      <view class="hero-action {{item.label === activeQuickEntry ? 'is-active' : ''}}" wx:for="{{quickEntries}}" wx:key="label" data-entry="{{item.label}}" bindtap="onQuickEntryTap">
+        <view class="hero-action-icon">{{item.icon}}</view>
+        <view class="hero-action-text">{{item.label}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="content-shell">
+    <view class="section">
+      <view class="section-head">
+        <view class="section-title">推荐漫游</view>
+        <view class="section-more">换一组</view>
+      </view>
+      <view class="grid-2">
+        <view class="roam-card card" wx:for="{{roamCards}}" wx:key="title">
+          <view class="roam-image {{item.imageStyle}}"></view>
+          <view class="pill">{{item.tag}}</view>
+          <view class="roam-title">{{item.title}}</view>
+          <view class="roam-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

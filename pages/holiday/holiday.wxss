@@ -1,0 +1,28 @@
+.forecast-list {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.forecast-card {
+  padding: 26rpx;
+}
+
+.forecast-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast-day {
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.forecast-advice {
+  margin-top: 16rpx;
+  color: #748780;
+  font-size: 26rpx;
+  line-height: 1.6;
+}

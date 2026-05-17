@@ -1,0 +1,39 @@
+<view class="page planner-page">
+  <view class="map-shell">
+    <view class="map-empty">地图占位区（空态）</view>
+  </view>
+
+  <view class="agent-panel {{panelState}}" bindtouchstart="onPanelTouchStart" bindtouchend="onPanelTouchEnd">
+    <view class="panel-grabber"></view>
+
+    <view class="panel-header" wx:if="{{panelState === 'expanded'}}">
+      <view class="new-chat-entry" bindtap="startNewChat">&lt; 新对话</view>
+    </view>
+
+    <view class="panel-cta" wx:if="{{panelState !== 'expanded'}}" bindtap="openAgentPanel">打开智能体对话</view>
+
+    <scroll-view class="message-list" scroll-y="true">
+      <view class="message-item {{item.role === 'assistant' ? 'assistant-message' : 'user-message'}}" wx:for="{{messages}}" wx:key="index">
+        <view class="message-role">{{item.role}}</view>
+        <view class="message-content">{{item.text}}</view>
+      </view>
+    </scroll-view>
+
+    <view class="tool-tabs">
+      <view
+        class="tool-tab {{activeTool === item ? 'active' : ''}}"
+        wx:for="{{tools}}"
+        wx:key="*this"
+        bindtap="onSelectTool"
+        data-tool="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+
+    <view class="chat-composer">
+      <input class="composer-input" placeholder="输入你的问题" value="{{draft}}" bindinput="onInput" />
+      <view class="composer-send" bindtap="onSend">发送</view>
+    </view>
+  </view>
+</view>

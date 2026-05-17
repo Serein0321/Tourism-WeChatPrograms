@@ -1,0 +1,35 @@
+.item-list {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.item-card {
+  padding: 20rpx;
+}
+
+.item-image {
+  height: 180rpx;
+  border-radius: 24rpx;
+  margin-bottom: 18rpx;
+}
+
+.item-title {
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.item-meta {
+  margin-top: 8rpx;
+  color: #27b37e;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.item-desc {
+  margin-top: 8rpx;
+  color: #748780;
+  font-size: 24rpx;
+  line-height: 1.5;
+}

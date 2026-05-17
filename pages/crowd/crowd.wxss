@@ -1,0 +1,30 @@
+.chart-card {
+  margin-top: 28rpx;
+  padding: 32rpx;
+}
+
+.bar-row {
+  height: 220rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 54rpx;
+  border-radius: 999rpx 999rpx 0 0;
+  background: linear-gradient(180deg, #3aa8f5, #30c58c);
+}
+
+.tip-list {
+  margin-top: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.tip-card {
+  padding: 24rpx;
+  color: #315048;
+  font-size: 26rpx;
+}

@@ -1,0 +1,26 @@
+.favorite-grid {
+  margin-top: 28rpx;
+}
+
+.favorite-card {
+  padding: 28rpx;
+}
+
+.favorite-count {
+  color: #27b37e;
+  font-size: 46rpx;
+  font-weight: 900;
+}
+
+.favorite-title {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.favorite-desc {
+  margin-top: 8rpx;
+  color: #748780;
+  font-size: 24rpx;
+  line-height: 1.5;
+}

@@ -1,0 +1,39 @@
+<view class="page community-page">
+  <view class="page-title">旅行社区</view>
+  <view class="page-subtitle">分享西安行程、游记和真实体验。</view>
+
+  <view class="compose-card gradient-night">
+    <view>
+      <view class="compose-title">记录我的西安之旅</view>
+      <view class="compose-desc">发帖、评价、分享行程都可以从这里开始。</view>
+    </view>
+    <view class="compose-button" bindtap="goPost">去发帖</view>
+  </view>
+
+  <view class="section">
+    <view class="tag-row">
+      <view class="pill pill-blue" wx:for="{{tags}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">热门动态</view>
+    <view class="post-list">
+      <view class="post-card card" wx:for="{{posts}}" wx:key="title">
+        <view class="post-image gradient-xian"></view>
+        <view class="post-body">
+          <view class="pill pill-orange">{{item.type}}</view>
+          <view class="post-title">{{item.title}}</view>
+          <view class="post-desc">{{item.desc}}</view>
+          <view class="post-score">评分 {{item.score}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="community-actions grid-3">
+    <view class="action-card soft-card" bindtap="goPost">发帖</view>
+    <view class="action-card soft-card" bindtap="goRating">评价打分</view>
+    <view class="action-card soft-card" bindtap="goShare">分享</view>
+  </view>
+</view>

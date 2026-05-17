@@ -1,0 +1,13 @@
+<view class="page secondary-page">
+  <view class="page-title">路线规划</view>
+  <view class="page-subtitle">精选西安一日游、夜游和两日游路线。</view>
+  <view class="route-list">
+    <view class="route-card card" wx:for="{{routes}}" wx:key="title">
+      <view class="route-title">{{item.title}}</view>
+      <view class="route-time">{{item.time}}</view>
+      <view class="stop-row">
+        <view class="pill" wx:for="{{item.stops}}" wx:key="*this">{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

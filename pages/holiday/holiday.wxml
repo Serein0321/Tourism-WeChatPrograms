@@ -1,0 +1,13 @@
+<view class="page secondary-page">
+  <view class="page-title">节假日预测</view>
+  <view class="page-subtitle">展示节假日热度、拥挤等级和推荐时间。</view>
+  <view class="forecast-list">
+    <view class="forecast-card card" wx:for="{{forecasts}}" wx:key="day">
+      <view class="forecast-top">
+        <view class="forecast-day">{{item.day}}</view>
+        <view class="pill pill-orange">拥挤 {{item.level}}</view>
+      </view>
+      <view class="forecast-advice">{{item.advice}}</view>
+    </view>
+  </view>
+</view>

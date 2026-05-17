@@ -1,0 +1,25 @@
+.compare-table {
+  margin-top: 28rpx;
+  padding: 22rpx;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 0.9fr;
+  gap: 12rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #edf4f0;
+  font-size: 24rpx;
+  color: #315048;
+}
+
+.compare-head {
+  color: #7d918b;
+  font-weight: 700;
+}
+
+.compare-reason {
+  grid-column: 1 / 5;
+  color: #27b37e;
+  font-weight: 700;
+}

@@ -1,0 +1,16 @@
+<view class="page secondary-page">
+  <view class="page-title">导入平台行程</view>
+  <view class="page-subtitle">静态展示导入流程和自动生成路线结果。</view>
+  <view class="import-card card">
+    <view class="input-box">粘贴携程/美团/地图行程链接</view>
+    <view class="primary-button">生成路线</view>
+  </view>
+  <view class="section">
+    <view class="section-title">导入步骤</view>
+    <view class="step-card soft-card" wx:for="{{steps}}" wx:key="*this">{{index + 1}}. {{item}}</view>
+  </view>
+  <view class="section">
+    <view class="section-title">生成结果</view>
+    <view class="step-card card" wx:for="{{result}}" wx:key="*this">{{item}}</view>
+  </view>
+</view>

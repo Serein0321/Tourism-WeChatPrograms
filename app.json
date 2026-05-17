@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/roam/roam",
+    "pages/planner/planner",
+    "pages/community/community",
+    "pages/profile/profile",
+    "pages/recommend/recommend",
+    "pages/compare/compare",
+    "pages/route/route",
+    "pages/crowd/crowd",
+    "pages/holiday/holiday",
+    "pages/import-trip/import-trip",
+    "pages/orders/orders",
+    "pages/history/history",
+    "pages/favorites/favorites",
+    "pages/trips/trips",
+    "pages/post/post",
+    "pages/rating/rating",
+    "pages/share/share"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "西安漫游",
+    "navigationBarBackgroundColor": "#f7fbf6",
+    "backgroundColor": "#f7fbf6"
+  },
+  "tabBar": {
+    "color": "#7f8f89",
+    "selectedColor": "#27b37e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/roam/roam",
+        "text": "信息漫游"
+      },
+      {
+        "pagePath": "pages/planner/planner",
+        "text": "智能规划"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "旅行社区"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

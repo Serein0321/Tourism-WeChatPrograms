@@ -1,0 +1,11 @@
+<view class="page secondary-page">
+  <view class="page-title">分享</view>
+  <view class="page-subtitle">分享行程卡片和推荐渠道静态展示。</view>
+  <view class="share-poster gradient-night">
+    <view class="poster-title">西安两日轻松游</view>
+    <view class="poster-desc">钟楼 · 城墙 · 大唐不夜城</view>
+  </view>
+  <view class="grid-2 channel-grid">
+    <view class="channel-card card" wx:for="{{channels}}" wx:key="*this">{{item}}</view>
+  </view>
+</view>

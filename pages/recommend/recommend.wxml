@@ -1,0 +1,12 @@
+<view class="page secondary-page">
+  <view class="page-title">商品推荐</view>
+  <view class="page-subtitle">基于西安热门体验的静态推荐卡片。</view>
+  <view class="item-list">
+    <view class="item-card card" wx:for="{{items}}" wx:key="title">
+      <view class="item-image gradient-xian"></view>
+      <view class="item-title">{{item.title}}</view>
+      <view class="item-meta">{{item.meta}}</view>
+      <view class="item-desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

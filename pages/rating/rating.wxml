@@ -1,0 +1,12 @@
+<view class="page secondary-page">
+  <view class="page-title">评价打分</view>
+  <view class="page-subtitle">星级评分、体验标签和文字评价静态 UI。</view>
+  <view class="rating-card card">
+    <view class="stars">★★★★★</view>
+    <view class="tag-row">
+      <view class="pill pill-orange" wx:for="{{tags}}" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="textarea-box">这次西安行程节奏舒适，夜游体验很出片。</view>
+    <view class="primary-button">提交评价</view>
+  </view>
+</view>

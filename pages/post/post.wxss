@@ -1,0 +1,31 @@
+.form-card {
+  margin-top: 28rpx;
+  padding: 26rpx;
+}
+
+.input-line,
+.textarea-box {
+  padding: 24rpx;
+  border-radius: 22rpx;
+  background: #f1f8f5;
+  color: #6f8580;
+  font-size: 26rpx;
+}
+
+.textarea-box {
+  height: 180rpx;
+  margin-top: 18rpx;
+  line-height: 1.6;
+}
+
+.upload-box {
+  height: 180rpx;
+  margin: 18rpx 0;
+  border-radius: 24rpx;
+  color: #235148;
+  font-size: 28rpx;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

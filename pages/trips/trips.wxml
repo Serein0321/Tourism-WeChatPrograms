@@ -1,0 +1,16 @@
+<view class="page secondary-page">
+  <view class="page-title">我的行程</view>
+  <view class="page-subtitle">管理行程，并进行发帖、评价和分享。</view>
+  <view class="trip-list">
+    <view class="trip-card card" wx:for="{{trips}}" wx:key="title">
+      <view class="trip-title">{{item.title}}</view>
+      <view class="trip-date">{{item.date}}</view>
+      <view class="trip-stops">{{item.stops}}</view>
+    </view>
+  </view>
+  <view class="grid-3 trip-actions">
+    <view class="action-card soft-card" bindtap="goPost">发帖</view>
+    <view class="action-card soft-card" bindtap="goRating">评价打分</view>
+    <view class="action-card soft-card" bindtap="goShare">分享</view>
+  </view>
+</view>

@@ -1,0 +1,136 @@
+page {
+  min-height: 100vh;
+  background: #f7fbf6;
+  color: #1f2d2a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28rpx 28rpx 48rpx;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 42rpx;
+  font-weight: 700;
+  color: #183c34;
+}
+
+.page-subtitle {
+  margin-top: 10rpx;
+  color: #6b7c76;
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+
+.section {
+  margin-top: 30rpx;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #203d36;
+}
+
+.section-more {
+  color: #27b37e;
+  font-size: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 28rpx;
+  box-shadow: 0 16rpx 40rpx rgba(39, 98, 83, 0.08);
+  box-sizing: border-box;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1rpx solid rgba(39, 179, 126, 0.12);
+  border-radius: 28rpx;
+  box-shadow: 0 14rpx 34rpx rgba(80, 124, 112, 0.07);
+  box-sizing: border-box;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: #e9f8f0;
+  color: #179369;
+  font-size: 24rpx;
+  white-space: nowrap;
+}
+
+.pill-blue {
+  background: #e9f5ff;
+  color: #2384c6;
+}
+
+.pill-orange {
+  background: #fff3df;
+  color: #c97719;
+}
+
+.gradient-xian {
+  background: linear-gradient(135deg, #dff7ee 0%, #a9dcff 52%, #ffdca8 100%);
+}
+
+.gradient-night {
+  background: linear-gradient(135deg, #89d4ff 0%, #b4e5d1 48%, #ffe5b4 100%);
+}
+
+.gradient-mountain {
+  background: linear-gradient(135deg, #d8f3dc 0%, #b7e4c7 44%, #95d5b2 100%);
+}
+
+.primary-button {
+  height: 76rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(135deg, #30c58c, #3aa8f5);
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-button {
+  height: 72rpx;
+  border-radius: 999rpx;
+  background: #eef8f3;
+  color: #22986d;
+  font-size: 28rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20rpx;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18rpx;
+}
+
+.muted {
+  color: #78908a;
+}

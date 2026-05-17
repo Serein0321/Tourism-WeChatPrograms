@@ -1,0 +1,10 @@
+<view class="page secondary-page">
+  <view class="page-title">发帖</view>
+  <view class="page-subtitle">静态发布表单，用于展示社区内容创建流程。</view>
+  <view class="form-card card">
+    <view class="input-line">标题：我的西安旅行灵感</view>
+    <view class="textarea-box">写下路线亮点、避坑建议和推荐美食。</view>
+    <view class="upload-box gradient-xian">添加旅行照片</view>
+    <view class="primary-button">发布动态</view>
+  </view>
+</view>

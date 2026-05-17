@@ -1,0 +1,24 @@
+.list {
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.row-card {
+  padding: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.row-desc {
+  margin-top: 8rpx;
+  color: #748780;
+  font-size: 24rpx;
+}
